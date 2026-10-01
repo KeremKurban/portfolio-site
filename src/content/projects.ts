@@ -23,9 +23,28 @@ export const projectFilters = [
   "API",
   "Vite",
   "Three.js",
+  "interpretability",
 ];
 
 export const projects: Project[] = [
+  {
+    id: "mech-interp-primer",
+    title: "Mechanistic Interpretability Primer",
+    description:
+      "Five minimal, runnable projects reproducing core interpretability results on GPT-2 small in plain PyTorch: linear probing, logit lens, induction heads, activation patching and sparse autoencoders. Runs on CPU in minutes.",
+    tags: ["Python", "LLM", "interpretability"],
+    image: "",
+    github: "https://github.com/KeremKurban/mechanistic-interpretability-primer",
+  },
+  {
+    id: "signal-interpretability",
+    title: "Signal Interpretability",
+    description:
+      "Attribution and causal explainability for time-series signals such as PPG, ECG and accelerometer data, carried over from vision-transformer methods. Compares attention maps with occlusion, perturbation, attention rollout and gradient-based attribution.",
+    tags: ["Python", "interpretability"],
+    image: "",
+    github: "https://github.com/KeremKurban/signal-interpretability",
+  },
   {
     id: "ca1-model",
     title: "Biophysically Detailed Model of Rat Hippocampus CA1 Region",

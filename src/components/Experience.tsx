@@ -36,6 +36,13 @@ export function Certifications() {
           <li key={c.name} className="flex flex-col rounded-2xl border border-line bg-panel/60 p-5">
             <h3 className="font-semibold leading-snug">{c.name}</h3>
             <p className="mt-1 text-sm text-muted">{c.issuer}</p>
+            {c.scope ? (
+              <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-muted">
+                {c.scope.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : null}
             <p className="mt-auto pt-3 font-mono text-sm text-accent">{c.date}</p>
           </li>
         ))}

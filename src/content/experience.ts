@@ -77,9 +77,21 @@ export const experience: Role[] = [
   },
 ];
 
-export type Certification = { name: string; issuer: string; date: string };
+export type Certification = { name: string; issuer: string; date: string; scope?: string[] };
 
 export const certifications: Certification[] = [
+  {
+    name: "Medical Devices (certificate of participation, 2-day online course)",
+    issuer: "University of Bern, taught by Lucendra SA",
+    date: "September 2026",
+    scope: [
+      "Role of quality, regulatory and clinical affairs professionals",
+      "CE marking process for medical devices",
+      "Quality management systems and ISO 13485 compliance",
+      "Development phases and risk management",
+      "Clinical evidence: clinical evaluation and clinical investigations",
+    ],
+  },
   { name: "Neo4j Certified Professional", issuer: "Neo4j GraphAcademy", date: "2024" },
   { name: "LLMOps", issuer: "Deeplearning.ai", date: "2024" },
   { name: "AI Agents in LangGraph", issuer: "Deeplearning.ai", date: "2024" },
