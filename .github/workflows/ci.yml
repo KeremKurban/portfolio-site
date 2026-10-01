@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+
+env:
+  NEXT_PUBLIC_SITE_URL: https://keremkurban.site
 
 jobs:
   test:
@@ -26,8 +30,30 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 14
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        with:
+          path: out
 
-  # External sites rot and rate-limit, so broken links are reported without blocking merges.
+  # Only ships builds that passed every test above.
+  deploy:
+    needs: test
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  # External sites rot and rate-limit, so broken links are reported without blocking deploys.
   links:
     runs-on: ubuntu-latest
     timeout-minutes: 10

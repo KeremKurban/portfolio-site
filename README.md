@@ -60,3 +60,27 @@ npm test               # builds, then runs all Playwright suites
 External requests are stubbed in browser tests, so they run offline and deterministically.
 CI (`.github/workflows/ci.yml`) runs typecheck, build and tests on every push and PR. A
 separate, non-blocking job checks external links.
+
+## Deployment (GitHub Pages → keremkurban.site)
+
+Every push to `main` runs the tests and, if they pass, deploys `out/` to GitHub Pages
+(`.github/workflows/ci.yml`). The build uses `NEXT_PUBLIC_SITE_URL=https://keremkurban.site`,
+which turns on search indexing, `robots.txt` and `sitemap.xml`. Local builds without it stay
+`noindex`.
+
+One-time setup:
+
+1. On GitHub: **Settings → Pages → Source: GitHub Actions**, then **Custom domain:
+   `keremkurban.site`**, then tick **Enforce HTTPS** once the certificate is issued.
+2. At Namecheap: **Domain List → Manage → Advanced DNS**. Delete the default parking
+   records, then add:
+
+   | Type | Host | Value |
+   | --- | --- | --- |
+   | A | @ | 185.199.108.153 |
+   | A | @ | 185.199.109.153 |
+   | A | @ | 185.199.110.153 |
+   | A | @ | 185.199.111.153 |
+   | CNAME | www | `keremkurban.github.io.` |
+
+DNS takes minutes to a few hours to propagate. The HTTPS certificate follows shortly after.
