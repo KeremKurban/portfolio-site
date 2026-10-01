@@ -3,12 +3,12 @@ import { legacyCdn, repoAsset } from "@/lib/assets";
 // Content carried over unchanged from the create.xyz export (src/app/page.jsx).
 export const site = {
   name: "Kerem Kurban",
-  role: "Machine Learning Engineer | MLOps & LLM Specialist",
+  role: "ML Engineer | Agentic AI, Evaluation & Interpretability",
   intro:
-    "Machine Learning Engineer at EPFL Blue Brain Project, specializing in MLOps and LLM development. I bridge the gap between artificial intelligence and neuroscience.",
-  highlights: ["Multi-Agentic LLMs", "Neo4j", "Python", "GraphRAG", "MLOps"],
-  location: "Geneve, Switzerland",
-  email: "keremkurban@hotmail.com",
+    "AI/ML engineer and computational neuroscientist. I build and evaluate agentic AI systems in production, including in regulated industry, and study how models arrive at their outputs, from brain circuit models to multimodal medical foundation models.",
+  highlights: ["Agentic Systems", "LLM Evaluation", "Interpretability", "Medical Foundation Models", "Computational Neuroscience", "Python"],
+  location: "Geneva, Switzerland",
+  email: "keremkurban@proton.me",
   links: {
     github: "https://github.com/KeremKurban",
     linkedin: "https://linkedin.com/in/kerem-kurban-5a40a1117",
