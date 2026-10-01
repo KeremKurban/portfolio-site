@@ -24,6 +24,8 @@ export const projectFilters = [
   "Vite",
   "Three.js",
   "interpretability",
+  "mechanistic-interpretability",
+  "time-series",
 ];
 
 export const projects: Project[] = [
@@ -32,7 +34,7 @@ export const projects: Project[] = [
     title: "Mechanistic Interpretability Primer",
     description:
       "Five minimal, runnable projects reproducing core interpretability results on GPT-2 small in plain PyTorch: linear probing, logit lens, induction heads, activation patching and sparse autoencoders. Runs on CPU in minutes.",
-    tags: ["Python", "LLM", "interpretability"],
+    tags: ["Python", "LLM", "interpretability", "mechanistic-interpretability"],
     image: "",
     github: "https://github.com/KeremKurban/mechanistic-interpretability-primer",
   },
@@ -41,7 +43,7 @@ export const projects: Project[] = [
     title: "Signal Interpretability",
     description:
       "Attribution and causal explainability for time-series signals such as PPG, ECG and accelerometer data, carried over from vision-transformer methods. Compares attention maps with occlusion, perturbation, attention rollout and gradient-based attribution.",
-    tags: ["Python", "interpretability"],
+    tags: ["Python", "interpretability", "time-series"],
     image: "",
     github: "https://github.com/KeremKurban/signal-interpretability",
   },
