@@ -18,11 +18,8 @@ export const projectFilters = [
   "neuroscience",
   "Python",
   "AWS",
-  "HTML/CSS",
   "Docker",
   "API",
-  "Vite",
-  "Three.js",
   "interpretability",
   "mechanistic-interpretability",
   "time-series",
@@ -82,23 +79,6 @@ export const projects: Project[] = [
     github: "https://github.com/KeremKurban/sonata-neo4j-loader",
   },
   {
-    id: "chat-with-brain",
-    title: "Chat with Brain",
-    description: "Talk to Brain Models with Large Language Models",
-    tags: ["Python", "Neo4j", "neuroscience", "RAG"],
-    image: repoAsset("resumes/dalle_twg.jpeg"),
-    github: "https://github.com/KeremKurban/chat-with-brain",
-  },
-  {
-    id: "sortify",
-    title: "Sortify",
-    description:
-      "Sortify is a web application that allows users to sort their favorite Spotify album tracks based on their preferences.",
-    tags: ["Python", "HTML/CSS"],
-    image: legacyCdn("75964e7c-82e3-4707-9b9c-458a4565dd8f"),
-    github: "https://github.com/KeremKurban/Sortify",
-  },
-  {
     id: "scholarag",
     title: "Scholarag",
     description:
@@ -106,15 +86,5 @@ export const projects: Project[] = [
     tags: ["RAG", "Python", "AWS", "Docker", "API"],
     image: legacyCdn("254ccaba-750e-4c8d-a887-a1461521c092"),
     github: "https://github.com/BlueBrain/scholarag",
-  },
-  {
-    id: "hypnosis-simulator",
-    title: "Hypnosis Simulator",
-    description:
-      "An interactive web application featuring various hypnotic visualizations and audio stimulations for relaxation and meditation. Includes multiple visualization types like Spiral Induction, Pulsing Light, and 3D Lorenz patterns, with customizable controls and audio accompaniment.",
-    tags: ["JavaScript", "Three.js", "WebGL", "Interactive", "Vite", "HTML5", "CSS3"],
-    image: repoAsset("resumes/app_hypnosis.PNG"),
-    github: "https://github.com/KeremKurban/hypnosis-simulator",
-    live: "https://keremkurban.github.io/hypnosis-simulator/",
   },
 ];
