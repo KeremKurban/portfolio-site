@@ -13,7 +13,7 @@ export const site = {
     github: "https://github.com/KeremKurban",
     linkedin: "https://linkedin.com/in/kerem-kurban-5a40a1117",
   },
-  cv: repoAsset("resumes/CV_9_5_2025.pdf", "485847889d35645617434ae9cfb3081c6570e40e"),
+  cv: repoAsset("resumes/CV_Kerem_Kurban_FDE-10_26.pdf", "01636cce3c442e974cdf1f5d04a42ba46780b284"),
   publicationsPdf: repoAsset("resumes/Publications_10_2024.pdf"),
   photo: legacyCdn("fb725b0a-aac9-4b8e-bece-1366d27e6df1"),
 } as const;
